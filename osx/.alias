@@ -1,2 +1,4 @@
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES ; killall Finder'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles YES ; killall Finder'
+
+echo "OSX shortcuts: showfiles, hidefiles"
