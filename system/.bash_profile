@@ -1,3 +1,12 @@
+
+# OS
+
+if [ "$(uname -s)" = "Darwin" ]; then
+  OS="OSX"
+else
+  OS=$(uname -s)
+fi
+
 # Resolve DOTFILES_DIR (assuming ~/.dotfiles on distros without readlink and/or $BASH_SOURCE/$0)
 
 READLINK=$(which greadlink || which readlink)
@@ -13,5 +22,21 @@ else
   return # `exit 1` would quit the shell itself
 fi
 
+# Source files
+
 source "$DOTFILES_DIR/system/.alias"
 source "$DOTFILES_DIR/system/.env"
+
+# Source OSX files
+
+if [ "$OS" = "OSX" ]; then
+	source "$DOTFILES_DIR/osx/.alias"
+fi
+
+# Clean up
+
+unset READLINK CURRENT_SCRIPT SCRIPT_PATH DOTFILE
+
+# Export
+
+export OS DOTFILES_DIR
