@@ -1,0 +1,10 @@
+[user]
+  name = Eduardo Pilla Portilho
+  email = eduardoportilho@spotify.com
+
+[alias]
+  st = status
+  co = checkout
+  
+[color]
+	ui = true
