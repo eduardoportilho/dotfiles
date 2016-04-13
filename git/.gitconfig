@@ -5,6 +5,7 @@
 [alias]
   st = status
   co = checkout
+  nuke = !git reset --hard $1 && git clean -d -f
   
 [color]
 	ui = true
