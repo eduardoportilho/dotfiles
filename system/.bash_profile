@@ -7,9 +7,9 @@ else
   OS=$(uname -s)
 fi
 
-# assuming ~/.dotfiles 
+# Dir where this dotfiles are installed
 
-DOTFILES_DIR="$HOME/dotfiles"
+DOTFILES_DIR="$HOME/dotfilesdir"
 
 # Source files
 
