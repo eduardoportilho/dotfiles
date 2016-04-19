@@ -3,4 +3,4 @@
 unlink "$HOME/dotfilesdir"
 unlink "$HOME/.bash_profile"
 unlink "$HOME/.inputrc"
-unlink "$HOME/git/.gitconfig"
+unlink "$HOME/.gitconfig"
