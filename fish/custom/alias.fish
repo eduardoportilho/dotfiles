@@ -22,7 +22,7 @@ set message $message", cclear"
 ################################
 # website - tail
 
-alias tailb "tail -f /spotify/log/apache2/"(hostname)"-error.log | grep Backend"
+alias tailb "tail -f /spotify/log/apache2/"(hostname)"-error.log | grep"
 set message $message", tailb"
 
 if [ $OS = "Linux" ]
