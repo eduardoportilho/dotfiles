@@ -17,7 +17,7 @@ set message $message" ll"
 # website - cache clear
 
 alias cclear "sudo rm -rf ~/src/website/Symfony/app/cache/dev/; and sudo chmod -R a+w ~/src/website/Symfony/app/cache"
-set message $message" cclear"
+set message $message", cclear"
 
 if [ $OS = "Linux" ]
 
