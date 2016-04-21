@@ -3,6 +3,8 @@
 # $DOTFILES_DIR = Dir where this dotfiles are installed
 export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+#TODO criar links para fish
+
 #symlinks
 ln -sfv "$DOTFILES_DIR" "$HOME/dotfilesdir"
 ln -sfv "$DOTFILES_DIR/system/.bash_profile" ~
