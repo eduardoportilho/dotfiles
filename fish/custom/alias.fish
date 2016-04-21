@@ -19,6 +19,12 @@ set message $message" ll"
 alias cclear "sudo rm -rf ~/src/website/Symfony/app/cache/dev/; and sudo chmod -R a+w ~/src/website/Symfony/app/cache"
 set message $message", cclear"
 
+################################
+# website - tail
+
+alias tailb "tail -f /spotify/log/apache2/"(hostname)"-error.log | grep Backend"
+set message $message", tailb"
+
 if [ $OS = "Linux" ]
 
     ################################
