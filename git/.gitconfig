@@ -6,7 +6,8 @@
   st = status
   co = checkout
   nuke = !git reset --hard $1 && git clean -d -f
-  
+  sapply = "!f() { git stash apply stash^{/$*}; }; f"
+
 [color]
 	ui = true
 [push]
