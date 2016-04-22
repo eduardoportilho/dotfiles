@@ -1,6 +1,6 @@
 ################################
 #
-# Aliases and common functs
+# Aliases and common functions
 #
 
 set message "Aliases:"
