@@ -11,7 +11,8 @@ set message "Aliases:"
 function ll
     ls -la $argv
 end
-set message $message" ll"
+alias md "mkdir $argv; and cd $argv"
+set message $message" ll, md"
 
 ################################
 # website - cache clear
