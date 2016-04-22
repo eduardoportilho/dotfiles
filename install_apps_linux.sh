@@ -7,7 +7,7 @@ export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ln -sfv "$DOTFILES_DIR" "$HOME/dotfilesdir"
 ln -sfv "$HOME/dotfilesdir/git/.gitconfig" ~
 
-if [! -d "~/dot-tmp" ]; then
+if [ ! -d "~/dot-tmp" ]; then
     mkdir ~/dot-tmp
 fi
 cd ~/dot-tmp
