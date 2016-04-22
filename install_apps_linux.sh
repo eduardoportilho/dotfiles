@@ -36,7 +36,7 @@ sudo apt-get install software-properties-common python-software-properties -y
 sudo apt-add-repository ppa:fish-shell/release-2
 sudo apt-get update -y
 sudo apt-get install fish=2.2.0-1~trusty -y
-if [ -d "~/.config/fish/" ]; then
+if [ ! -d "~/.config/fish/" ]; then
     mkdir -p ~/.config/fish/
 fi
 sudo chmod -R a+rw /home/eduardoportilho/.config/fish
