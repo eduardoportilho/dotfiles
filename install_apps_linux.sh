@@ -7,25 +7,12 @@ export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ln -sfv "$DOTFILES_DIR" "$HOME/dotfilesdir"
 ln -sfv "$HOME/dotfilesdir/git/.gitconfig" ~
 
-if [ ! -d "~/dot-tmp" ]; then
-    mkdir ~/dot-tmp
-fi
-cd ~/dot-tmp
-
 #Tig - linux
 echo ""
 echo " Installing tig..."
 echo ""
 
-sudo apt-get install libncurses-dev -y
-curl http://jonas.nitro.dk/tig/releases/tig-2.1.1.tar.gz --output tig-2.1.1.tar.gz
-tar -zxvf tig-2.1.1.tar.gz
-cd tig-2.1.1
-./configure
-make
-sudo make install
-cd ~/dot-tmp
-
+sudo apt-get install tig -y
 
 # Fish
 echo ""
@@ -41,6 +28,7 @@ if [ ! -d "~/.config/fish/" ]; then
 fi
 sudo chmod -R a+rw /home/eduardoportilho/.config/fish
 
+cp ~/.profile ~/.profile_bf_dot
 echo ""                                                         >> ~/.profile
 echo "# Change shell to fish"                                   >> ~/.profile
 echo "if [ \"$SHELL\" != \"/usr/bin/fish\" ]"                   >> ~/.profile
@@ -55,7 +43,7 @@ echo " Installing Oh-My-Fish..."
 echo ""
 export SHELL="/usr/bin/fish"
 exec /usr/bin/fish -l
-cd ~/dot-tmp
+
 curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
 ln -sfv "$HOME/dotfilesdir/fish/init.fish" ~/.config/omf/init.fish
 ln -sfv "$HOME/dotfilesdir/fish/custom" ~/.config/omf/custom
