@@ -20,7 +20,7 @@ echo " Installing Fish..."
 echo ""
 
 sudo apt-get install software-properties-common python-software-properties -y
-sudo apt-add-repository ppa:fish-shell/release-2
+sudo apt-add-repository ppa:fish-shell/release-2 -y
 sudo apt-get update -y
 sudo apt-get install fish=2.2.0-1~trusty -y
 if [ ! -d "~/.config/fish/" ]; then
@@ -41,11 +41,13 @@ echo "fi"                                                       >> ~/.profile
 echo ""
 echo " Installing Oh-My-Fish..."
 echo ""
-export SHELL="/usr/bin/fish"
-exec /usr/bin/fish -l
 
 curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
 ln -sfv "$HOME/dotfilesdir/fish/init.fish" ~/.config/omf/init.fish
 ln -sfv "$HOME/dotfilesdir/fish/custom" ~/.config/omf/custom
 omf install agnoster
 omf theme agnoster
+
+
+export SHELL="/usr/bin/fish"
+exec /usr/bin/fish -l
