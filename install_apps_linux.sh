@@ -37,6 +37,14 @@ echo "    export SHELL=\"/usr/bin/fish\""                       >> ~/.profile
 echo "    exec /usr/bin/fish -l    # -l: run as a login shell"  >> ~/.profile
 echo "fi"                                                       >> ~/.profile
 
+# Autojump
+# https://github.com/wting/autojump
+#git clone git://github.com/joelthelion/autojump.git
+#cd autojump
+#./install.py or ./uninstall.py
+#sudo apt-get install autojump=21.7.1-1
+#if test -f /home/eduardoportilho/.autojump/share/autojump/autojump.fish; . /home/eduardoportilho/.autojump/share/autojump/autojump.fish; end
+
 # Oh-My-Fish
 echo ""
 echo " Installing Oh-My-Fish..."

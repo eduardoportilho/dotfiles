@@ -43,7 +43,12 @@ if [ $OS = "OSX" ]
 
     alias findershow 'defaults write com.apple.finder AppleShowAllFiles YES ; killall Finder'
     alias finderhide 'defaults write com.apple.finder AppleShowAllFiles NO ; killall Finder'
-    set message $message", findershow, finderhide"
+
+    ################################
+    # Simple HTTP server
+    
+    alias serve 'python -m SimpleHTTPServer 8000'
+    set message $message", serve"
 
 end
 

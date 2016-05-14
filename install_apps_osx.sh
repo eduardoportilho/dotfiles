@@ -1,0 +1,1 @@
+# TODO: repetir install_apps_linux.sh para OSX
