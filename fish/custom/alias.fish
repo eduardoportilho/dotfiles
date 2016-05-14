@@ -3,7 +3,7 @@
 # Aliases and common functions
 #
 
-set message "Aliases:"
+set message "[$OS] Aliases:"
 
 ################################
 # Perfect ls
@@ -15,16 +15,10 @@ alias md "mkdir $argv; and cd $argv"
 set message $message" ll, md"
 
 ################################
-# website - cache clear
+# Fish restart
 
-alias cclear "sudo rm -rf ~/src/website/Symfony/app/cache/dev/; and sudo chmod -R a+w ~/src/website/Symfony/app/cache"
-set message $message", cclear"
-
-################################
-# website - tail
-
-alias tailb "tail -f /spotify/log/apache2/"(hostname)"-error.log | grep"
-set message $message", tailb"
+alias fish_restart "source ~/.config/fish/config.fish"
+set message $message", fish_restart"
 
 if [ $OS = "Linux" ]
 
@@ -33,6 +27,20 @@ if [ $OS = "Linux" ]
 
     alias devf "/src/website/devify.sh --auto --skip-static --skip-npm --skip-language --skip-cms --setup-permissions"
     set message $message", devf"
+
+
+    ################################
+    # website - cache clear
+
+    alias cclear "sudo rm -rf ~/src/website/Symfony/app/cache/dev/; and sudo chmod -R a+w ~/src/website/Symfony/app/cache"
+    set message $message", cclear"
+
+
+    ################################
+    # website - tail
+
+    alias tailb "tail -f /spotify/log/apache2/"(hostname)"-error.log | grep"
+    set message $message", tailb"
 
 end
 
@@ -46,7 +54,7 @@ if [ $OS = "OSX" ]
 
     ################################
     # Simple HTTP server
-    
+
     alias serve 'python -m SimpleHTTPServer 8000'
     set message $message", serve"
 

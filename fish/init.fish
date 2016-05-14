@@ -2,8 +2,8 @@
 set fish_greeting
 
 # Set OS variable
-set uname (uname -s)
-if uname = "Darwin"
+set osname (uname -s)
+if [ $osname = "Darwin" ]
     set -x OS "OSX"
 else
     set -x OS "Linux"
