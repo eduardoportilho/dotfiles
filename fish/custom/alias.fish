@@ -11,21 +11,26 @@ set message "[$OS] Aliases:"
 function ll
     ls -la $argv
 end
-alias md "mkdir $argv; and cd $argv"
+
+function md
+	mkdir $argv
+	cd $argv
+end
+
 set message $message" ll, md"
 
 ################################
 # Fish restart
 
-alias fish_restart "source ~/.config/fish/config.fish"
-set message $message", fish_restart"
+alias fishrst "source ~/.config/fish/config.fish"
+set message $message", fishrst"
 
 if [ $OS = "Linux" ]
 
     ################################
     # Fast(er) devify
 
-    alias devf "/src/website/devify.sh --auto --skip-static --skip-npm --skip-language --skip-cms --setup-permissions"
+    alias devf "~/src/website/devify.sh --auto --skip-static --skip-npm --skip-language --skip-cms --setup-permissions"
     set message $message", devf"
 
 
