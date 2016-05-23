@@ -6,7 +6,7 @@
 set message "[$OS] Aliases:"
 
 ################################
-# Perfect ls
+# General
 
 function ll
     ls -la $argv
@@ -20,10 +20,11 @@ end
 set message $message" ll, md"
 
 ################################
-# Fish restart
+# Fish specific
 
 alias fishrst "source ~/.config/fish/config.fish"
-set message $message", fishrst"
+alias gobash "exec /bin/bash -l"
+set message $message", fishrst, gobash"
 
 if [ $OS = "Linux" ]
 
