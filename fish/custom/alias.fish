@@ -24,7 +24,9 @@ set message $message" ll, md"
 
 alias fishrst "source ~/.config/fish/config.fish"
 alias gobash "exec /bin/bash -l"
-set message $message", fishrst, gobash"
+alias herokud "git add . ; and git commit -a --amend -C HEAD ; and git push -f heroku master"
+
+set message $message", fishrst, gobash, herokud"
 
 if [ $OS = "Linux" ]
 
@@ -45,8 +47,8 @@ if [ $OS = "Linux" ]
     ################################
     # website - tail
 
-    alias tailb "tail -f /spotify/log/apache2/"(hostname)"-error.log | grep"
-    set message $message", tailb"
+    alias logs "tail -f /spotify/log/apache2/"(hostname)"-error.log | grep"
+    set message $message", logs"
 
 end
 
