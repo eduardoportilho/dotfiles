@@ -8,6 +8,7 @@
   nuke = !git reset --hard $1 && git clean -d -f
   sapply = "!f() { git stash apply stash^{/$*}; }; f"
   cm = !git add -A && git commit
+  cmp = !git add -A && git commit -m "..." && git push
 
 [color]
 	ui = true
