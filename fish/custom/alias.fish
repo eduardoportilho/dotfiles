@@ -44,8 +44,19 @@ if [ $OS = "Linux" ]
     ################################
     # website - cache clear
 
-    alias cclear "sudo rm -rf ~/src/website/Symfony/app/cache/dev/; and sudo chmod -R a+w ~/src/website/Symfony/app/cache"
-    set message $message", cclear"
+    function cachezap
+        if test -d ~/src/website/Symfony/app/cache/dev
+            sudo rm -rf ~/src/website/Symfony/app/cache/dev/*
+        end
+
+        if not test -d ~/src/website/Symfony/app/cache
+            mkdir ~/src/website/Symfony/app/cache
+        end
+
+        sudo chmod -R a+w ~/src/website/Symfony/app/cache
+        sudo chown -R $USER ~/src/website/Symfony/app/cache
+    end
+    set message $message", cachezap"
 
 
     ################################
