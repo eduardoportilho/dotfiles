@@ -62,7 +62,7 @@ if [ $OS = "Linux" ]
     ################################
     # website - tail
 
-    alias logs "tail -f /spotify/log/apache2/"(hostname)"-error.log | grep"
+    alias logs "tail -f /spotify/log/apache2/"(hostname)"-error.log | grep -v \"deprecated\" | grep -i"
     set message $message", logs"
 
 end
