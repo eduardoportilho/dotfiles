@@ -53,8 +53,8 @@ if [ $OS = "Linux" ]
             mkdir ~/src/website/Symfony/app/cache
         end
 
-        sudo chmod -R a+w ~/src/website/Symfony/app/cache
-        sudo chown -R $USER ~/src/website/Symfony/app/cache
+        sudo chmod -R a+rwX ~/src/website/Symfony/app/cache
+        sudo chown -R $USER:www-data ~/src/website/Symfony/app/cache
     end
     set message $message", cachezap"
 
