@@ -29,8 +29,9 @@ set message $message" hlp, ll, md"
 alias fishrst "source ~/.config/fish/config.fish"
 alias gobash "exec /bin/bash -l"
 alias herokud "git add . ; and git commit -a --amend -C HEAD ; and git push -f heroku master"
+alias spm "npm -reg http://npm-registry.spotify.net"
 
-set message $message", fishrst, gobash, herokud"
+set message $message", fishrst, gobash, herokud, spm"
 
 if [ $OS = "Linux" ]
 
