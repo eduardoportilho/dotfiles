@@ -17,10 +17,6 @@ function md
 	cd $argv
 end
 
-function hlp
-    echo $message
-end
-
 set message $message" hlp, ll, md"
 
 ################################
@@ -91,4 +87,9 @@ if [ $OS = "OSX" ]
 
 end
 
-echo $message
+set -x -g help_message $message
+echo $help_message
+
+function hlp
+    echo $help_message
+end
