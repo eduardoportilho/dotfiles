@@ -84,6 +84,9 @@ if [ $OS = "OSX" ]
     alias srct "open -a SourceTree"
     set message $message", srct"
 
+    alias ptclient "python ~/dev/tools/ptclient.py"
+    set message $message", ptclient"
+
 
 end
 
