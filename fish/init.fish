@@ -13,3 +13,5 @@ end
 for path in $OMF_CONFIG/custom/*
 	source $path ^/dev/null
 end
+
+[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish

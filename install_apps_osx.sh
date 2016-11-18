@@ -20,6 +20,11 @@ brew install fish
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
 
+if [ ! -d "~/.config/fish/" ]; then
+    mkdir -p ~/.config/fish/
+fi
+sudo chmod -R a+rw $HOME/.config/fish
+
 # Install Oh-My-Fish
 curl -L http://get.oh-my.fish | fish
 ln -sfv "$HOME/dotfilesdir/fish/init.fish" ~/.config/omf/init.fish
