@@ -80,6 +80,11 @@ if [ $OS = "OSX" ]
     set message $message", serve"
 
     ################################
+    # Install php unit
+    # https://ghe.spotify.net/morpheus/website/wiki/Local-Development-Running-Unit-Tests#install-phpunit
+    set PATH $HOME/.composer/vendor/bin/ $PATH
+
+    ################################
     # Misc
     alias srct "open -a SourceTree"
     set message $message", srct"
