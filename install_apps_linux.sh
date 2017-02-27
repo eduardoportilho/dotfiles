@@ -56,6 +56,12 @@ ln -sfv "$HOME/dotfilesdir/fish/custom" ~/.config/omf/custom
 omf install agnoster
 omf theme agnoster
 
+# Bass
+if [ ! -d "$DOTFILES_DIR/../bass" ]; then
+    mkdir -p "$DOTFILES_DIR/../bass"
+fi
+git clone git@github.com:edc/bass.git "$DOTFILES_DIR/../bass"
+"$DOTFILES_DIR/../bass/make install"
 
 export SHELL="/usr/bin/fish"
 exec /usr/bin/fish -l

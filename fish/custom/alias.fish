@@ -29,6 +29,19 @@ alias spm "npm -reg http://npm-registry.spotify.net"
 
 set message $message", fishrst, gobash, herokud, spm"
 
+
+################################
+# NVM:
+
+if test -d ~/.nvm/
+    # nvm fish wrapper
+    # uses https://github.com/edc/bass
+    function nvm
+      bass source ~/.nvm/nvm.sh ';' nvm $argv
+    end
+end
+
+
 if [ $OS = "Linux" ]
 
     ################################

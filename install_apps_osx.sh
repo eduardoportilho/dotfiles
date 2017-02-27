@@ -37,6 +37,13 @@ ln -sfv "$HOME/dotfilesdir/fish/custom" ~/.config/omf/custom
 # omf install robbyrussell
 # omf install pure
 
+# Bass
+if [ ! -d "$DOTFILES_DIR/../bass" ]; then
+    mkdir -p "$DOTFILES_DIR/../bass"
+fi
+git clone git@github.com:edc/bass.git "$DOTFILES_DIR/../bass"
+"$DOTFILES_DIR/../bass/make install"
+
 # Autojump
 brew install autojump
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
