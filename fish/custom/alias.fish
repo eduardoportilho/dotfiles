@@ -93,18 +93,21 @@ if [ $OS = "OSX" ]
     set message $message", serve"
 
     ################################
-    # Install php unit
-    # https://ghe.spotify.net/morpheus/website/wiki/Local-Development-Running-Unit-Tests#install-phpunit
-    set PATH $HOME/.composer/vendor/bin/ $PATH
-
-    ################################
     # Misc
+
     alias srct "open -a SourceTree"
     set message $message", srct"
 
     alias ptclient "python ~/dev/tools/ptclient.py"
     set message $message", ptclient"
 
+    ################################
+    # PATH
+
+    # Install php unit: https://ghe.spotify.net/morpheus/website/wiki/Local-Development-Running-Unit-Tests#install-phpunit
+    set -gx PATH $PATH $HOME/.composer/vendor/bin/
+
+    set -gx PATH $PATH "/Applications/Postgres.app/Contents/Versions/latest/bin"
 
 end
 
