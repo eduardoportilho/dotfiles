@@ -109,6 +109,9 @@ if [ $OS = "OSX" ]
 
     set -gx PATH $PATH "/Applications/Postgres.app/Contents/Versions/latest/bin"
 
+    # Go:
+    set -gx GOPATH $HOME/dev/src/go
+
 end
 
 set -x -g help_message $message
